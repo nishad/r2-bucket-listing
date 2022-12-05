@@ -2,6 +2,8 @@
 
 A Deno script to generate an HTML index page for a Cloudflare R2 bucket. This index page can be uploaded to the bucket, or saved to a local file.
 
+Example : [https://nishad.github.io/r2-bucket-listing/index-sample.html](https://nishad.github.io/r2-bucket-listing/index-sample.html)
+
 ## Features
 
 *   Uses the S3 compatible API of R2 to get a list of objects from the bucket
@@ -15,14 +17,14 @@ A Deno script to generate an HTML index page for a Cloudflare R2 bucket. This in
 
 ## Requirements
 
-*   Deno 1.3.3 or higher
+*   Deno 1.24.3 or higher
 *   Cloudflare R2 account credentials (A token with atleast read permission to the bucket)
 *   R2 bucket name
 *   (Optional) Public URL of the bucket
 
 ## Usage
 
-1.  Install Deno if you don't have it already: [https://deno.land/#installation](https://deno.land/#installation)
+1.  Install Deno if you don't have it already: [https://deno.land/](https://deno.land/)
 2.  Download or clone the script
 3.  Configure the script by filling in the R2 credentials, bucket name, and (optionally) public URL in the `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, and `R2_PUBLIC_BUCKET_URL` variables at the top of the script
 4.  Optionally edit the `template.html` 
@@ -41,8 +43,8 @@ Additionally, the configuration specifies whether the generated index should be 
 
 ## Template
 
-You can also modify `template.html`. This is an HTML template using the nunjucks templating language. It creates an HTML page with a directory index of files. The page has a title, table of files, and a footer with a link to a website and a copyright notice. The files are passed to the template as a variable files, which is an array of objects containing information about each file. The file information is used to populate the table with the file name, last modified date, size, and a download button. The template uses the bulma CSS framework for styling.
+You can also modify `template.html`. This is an HTML template using the [nunjucks](https://mozilla.github.io/nunjucks/) templating language. It creates an HTML page with a directory index of files. The page has a title, table of files, and a footer with a link to a website and a copyright notice. The files are passed to the template as a variable files, which is an array of objects containing information about each file. The file information is used to populate the table with the file name, last modified date, size, and a download button. The template uses the [bulma CSS framework](https://bulma.io) for styling.
 
 ## License
 
-This script is licensed under the MIT license. See [LICENSE](https://chat.openai.com/LICENSE) for more details.
+This script is licensed under the MIT license. See [LICENSE](LICENSE) for more details.

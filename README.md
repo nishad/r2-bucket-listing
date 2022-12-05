@@ -4,7 +4,7 @@ A Deno script to generate an HTML index page for a Cloudflare R2 bucket. This in
 
 ## Features
 
-*   Uses the AWS S3 compatible API to get a list of objects from the bucket
+*   Uses the S3 compatible API of R2 to get a list of objects from the bucket
 *   Filters the list to only include files with non-zero size
 *   Sorts the list by last modified date
 *   Formats the file size and last modified date
@@ -31,13 +31,13 @@ A Deno script to generate an HTML index page for a Cloudflare R2 bucket. This in
 
 ## Configuration
 
-This configuration is setting up the credentials and information needed to access and use an R2 bucket. The R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, and R2_SECRET_ACCESS_KEY are the credentials needed to authenticate with the R2 service. The R2_BUCKET is the specific bucket that will be used for the index generation.
+This configuration is setting up the credentials and information needed to access and use an R2 bucket. The `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, and `R2_SECRET_ACCESS_KEY` are the credentials needed to authenticate with the R2 service. The `R2_BUCKET` is the specific bucket that will be used for the index generation.
 
-The R2_PREFIX is the folder within the bucket where the index will be generated, and should be specified without the beginning slash but with the ending slash. The R2_PUBLIC_BUCKET_URL is the URL of the bucket that can be accessed publicly.
+The `R2_PREFIX` is the folder within the bucket where the index will be generated, and should be specified without the beginning slash but with the ending slash. The `R2_PUBLIC_BUCKET_URL` is the URL of the bucket that can be accessed publicly.
 
-The R2_UPLOAD_INDEX flag determines whether the index will be uploaded to the R2 bucket or not. If set to true, the R2 access token must have the appropriate rights to write to the bucket.
+The `R2_UPLOAD_INDEX` flag determines whether the index will be uploaded to the R2 bucket or not. If set to true, the R2 access token must have the appropriate rights to write to the bucket.
 
-Additionally, the configuration specifies whether the generated index should be saved as a local file (SAVE_TO_FILE) and whether it should be opened in a browser (OPEN_IN_BROWSER).
+Additionally, the configuration specifies whether the generated index should be saved as a local file (SAVE_TO_FILE) and whether it should be opened in a browser (`OPEN_IN_BROWSER`).
 
 ## Template
 

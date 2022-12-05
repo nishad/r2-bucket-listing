@@ -26,7 +26,7 @@ A Deno script to generate an HTML index page for a Cloudflare R2 bucket. This in
 2.  Download or clone the script
 3.  Configure the script by filling in the R2 credentials, bucket name, and (optionally) public URL in the `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, and `R2_PUBLIC_BUCKET_URL` variables at the top of the script
 4.  Optionally edit the `template.html` 
-4.  Run the script: `deno run --allow-net index.ts`
+4.  Run the script: `deno run --allow-net --allow-read --allow-write generate-r2-index.js`
 5.  The HTML page will be generated, and depending on your configuration, saved to a local file, opened in the browser, or uploaded to the bucket
 
 ## Configuration
